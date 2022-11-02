@@ -14,6 +14,7 @@ type
 
   TForm1 = class(TForm)
     btnLoad: TButton;
+    Image1: TImage;
     imgSrc: TImage;
     OpenPictureDialog1: TOpenPictureDialog;
     procedure btnLoadClick(Sender: TObject);
