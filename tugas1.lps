@@ -22,20 +22,24 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="histogramGrayscale"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="54"/>
-        <CursorPos X="15" Y="67"/>
+        <TopLine Value="55"/>
+        <CursorPos X="15" Y="68"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="1">
+    <JumpHistory HistoryIndex="2">
       <Position>
         <Filename Value="histogramgrayscale.pas"/>
       </Position>
       <Position>
         <Filename Value="histogramgrayscale.pas"/>
         <Caret Line="56" Column="28" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="histogramgrayscale.pas"/>
+        <Caret Line="67" Column="15" TopLine="54"/>
       </Position>
     </JumpHistory>
     <RunParams>

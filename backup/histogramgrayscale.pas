@@ -72,7 +72,7 @@ begin
   begin
     for i := 0 to imgSrc.Width-1 do
     begin
-      histo[bitmapGray2[i,j]] := histo[bitmapGray2[i,j]] + 1;
+      inc(histo[bitmapGray2[i,j]]);
     end;
   end;
 end;
