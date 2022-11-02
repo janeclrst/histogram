@@ -1,0 +1,30 @@
+object Form1: TForm1
+  Left = 437
+  Height = 380
+  Top = 227
+  Width = 645
+  Caption = 'Form1'
+  ClientHeight = 380
+  ClientWidth = 645
+  LCLVersion = '2.2.0.1'
+  object imgSrc: TImage
+    Left = 72
+    Height = 170
+    Top = 104
+    Width = 154
+    AutoSize = True
+  end
+  object btnLoad: TButton
+    Left = 72
+    Height = 25
+    Top = 24
+    Width = 75
+    Caption = 'Load'
+    OnClick = btnLoadClick
+    TabOrder = 0
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    Left = 306
+    Top = 21
+  end
+end

@@ -23,4 +23,8 @@ object Form1: TForm1
     OnClick = btnLoadClick
     TabOrder = 0
   end
+  object OpenPictureDialog1: TOpenPictureDialog
+    Left = 306
+    Top = 21
+  end
 end
