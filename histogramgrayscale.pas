@@ -38,6 +38,7 @@ var
   bitmapR, bitmapG, bitmapB, BitmapGray, BitmapBiner : array[0..1000, 0..1000] of integer;
   bitmapR2, bitmapG2, bitmapB2, BitmapGray2, BitmapBiner2 : array[0..1000, 0..1000] of integer;
   hasilR, hasilG, hasilB, hasilGray, hasilBiner : array[0..1000, 0..1000] of integer;
+  histo : array[0..255] of integer;
 
 procedure TForm1.btnLoadClick(Sender: TObject);
 var
@@ -64,6 +65,14 @@ begin
         BitmapBiner2[i,j] := 1
       else
         BitmapBiner2[i,j] := 0;
+    end;
+  end;
+
+  for j:= 0  to imgSrc.Height-1 do
+  begin
+    for i := 0 to imgSrc.Width-1 do
+    begin
+      inc(histo[bitmapGray2[i,j]]);
     end;
   end;
 end;
