@@ -15,9 +15,10 @@ type
   TForm1 = class(TForm)
     btnLoad: TButton;
     btnDraw: TButton;
-    Image1: TImage;
+    imgMod: TImage;
     imgSrc: TImage;
     OpenPictureDialog1: TOpenPictureDialog;
+    procedure btnDrawClick(Sender: TObject);
     procedure btnLoadClick(Sender: TObject);
   private
 
@@ -77,6 +78,35 @@ begin
       inc(histo[bitmapGray2[i,j]]);
     end;
   end;
+end;
+
+procedure TForm1.btnDrawClick(Sender: TObject);
+var
+  i, j : integer;
+
+begin
+  for j:= 0  to imgMod.Height-1 do
+  begin
+       for i := 0 to imgMod.Width-1 do
+       begin
+            imgMod.Canvas.Pixels[i,j]:= RGB(255, 255, 255)
+       end;
+  end;
+
+  imgMod.Canvas.MoveTo(5,5);
+  imgMod.Canvas.LineTo(5,280);
+  imgMod.Canvas.MoveTo(5,280);
+  imgMod.Canvas.LineTo(265,280);
+
+  for j:= 0  to imgSrc.Height-1 do
+  begin
+    for i := 0 to imgSrc.Width-1 do
+    begin
+      imgMod.Canvas.MoveTo(10+i, 280);
+      imgMod.Canvas.LineTo(10+i, 280-histo[i]);
+    end;
+  end;
+
 end;
 
 end.

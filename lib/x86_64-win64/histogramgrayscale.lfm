@@ -23,11 +23,20 @@ object Form1: TForm1
     OnClick = btnLoadClick
     TabOrder = 0
   end
-  object Image1: TImage
+  object imgMod: TImage
     Left = 275
     Height = 300
     Top = 104
     Width = 275
+  end
+  object btnDraw: TButton
+    Left = 184
+    Height = 25
+    Top = 24
+    Width = 75
+    Caption = 'Draw'
+    OnClick = btnDrawClick
+    TabOrder = 1
   end
   object OpenPictureDialog1: TOpenPictureDialog
     Left = 306
