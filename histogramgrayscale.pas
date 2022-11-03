@@ -5,10 +5,16 @@ unit histogramGrayscale;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls;
 
 type
+
+  { TForm1 }
+
   TForm1 = class(TForm)
+    btnLoad: TButton;
+    imgSrc: TImage;
+    procedure btnLoadClick(Sender: TObject);
   private
 
   public
@@ -21,6 +27,13 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.btnLoadClick(Sender: TObject);
+begin
+
+end;
 
 end.
 
