@@ -39,8 +39,6 @@ uses
 
 var
   bitmapR, bitmapG, bitmapB, BitmapGray, BitmapBiner : array[0..1000, 0..1000] of integer;
-  bitmapR2, bitmapG2, bitmapB2, BitmapGray2, BitmapBiner2 : array[0..1000, 0..1000] of integer;
-  hasilR, hasilG, hasilB, hasilGray, hasilBiner : array[0..1000, 0..1000] of integer;
   histo : array[0..255] of integer;
 
 procedure TForm1.btnLoadClick(Sender: TObject);
@@ -60,14 +58,14 @@ begin
       G := GetGValue(imgSrc.Canvas.Pixels[i,j]);
       B := GetBValue(imgSrc.Canvas.Pixels[i,j]);
       gray := (R + G + B) div 3;
-      bitmapR2[i,j] := R;
-      bitmapG2[i,j] := G;
-      bitmapB2[i,j] := B;
+      bitmapR[i,j] := R;
+      bitmapG[i,j] := G;
+      bitmapB[i,j] := B;
       bitmapGray2[i,j] := gray;
       if gray>127 then
-        BitmapBiner2[i,j] := 1
+        BitmapBiner[i,j] := 1
       else
-        BitmapBiner2[i,j] := 0;
+        BitmapBiner[i,j] := 0;
     end;
   end;
 
@@ -75,7 +73,7 @@ begin
   begin
     for i := 0 to imgSrc.Width-1 do
     begin
-      inc(histo[bitmapGray2[i,j]]);
+      inc(histo[bitmapGray[i,j]]);
     end;
   end;
 end;
